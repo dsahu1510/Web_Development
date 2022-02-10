@@ -1,0 +1,15 @@
+	3feb
+arrow fn
+default params
+rest params
+spread operators
+
+	4feb
+str_interpolation
+class obj
+constructor class
+
+	7feb
+setters and getters
+modules
+render in react

@@ -1,0 +1,69 @@
+<!-- function login(username, password){ -->
+    <!-- return username == "abc" && password == "abc";
+}
+
+var log = (u,p) => u == "abc" && p == "abc"; -->
+
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        username<input type="text" id="username">
+        password <input type="text" id="password">
+        <button onclick="validate()">validate</button>
+
+        <script>
+            var validate= (username,password) =>
+            {
+                var username = document.getElementById("username").value;
+
+                var password = document.getElementById("password").value;
+
+                if(username == 'abc' && password == 'abc')
+                {
+                    alert("validated")
+                }
+                else{
+                    alert("unvalidated")
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
+
+<!-- <html>
+    <body>
+        <label for="">username</label>
+        <input type="text" id="name">
+        <label for="">password</label>
+        <input type="text" id="pass">
+        <button onclick='login("sonia","sonia")'>Submit</button>
+
+    
+    </body>
+    <script type="text/javascript">
+
+        var login=(u,p)=>{
+            var username=document.getElementById("name").value;
+            var password=document.getElementById("pass").value;
+
+            if(username==u && password==p)
+            {
+                console.log("login successfull");
+            }
+            else
+            {
+                console.log("login not successfull");
+            }
+
+        }
+
+        //login("sonia","sonia");
+
+    </script>
+</html> -->
