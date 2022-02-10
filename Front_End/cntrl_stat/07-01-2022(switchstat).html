@@ -1,0 +1,47 @@
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        
+        <select id="language" onchange="displaycontent()">
+
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+            <option value="arabic">Arabic</option>
+            <option value="russian">Russian</option>
+            <option value="korean">Korean</option>
+
+        </select>
+
+        <h1 id="content"></h1>
+
+        <script>
+
+                displaycontent()
+            function displaycontent(){
+
+                var click = document.getElementById("language").value;
+
+                var lang = document.getElementById("content");
+
+                switch(click){
+
+                    case "english" : content.innerHTML = 'Hello and welcome to javascript classes'; break
+
+                    case "hindi" : content.innerHTML = 'नमस्ते और जावास्क्रिप्ट कक्षाओं में आपका स्वागत है'; break
+
+                    case "arabic" : content.innerHTML = 'أهلا ومرحبا بكم في دروس جافا'; break
+
+                    case "russian" : content.innerHTML = 'Привет и добро пожаловать на курсы javascript'; break
+
+                    case "korean" : content.innerHTML = '안녕하세요. 자바스크립트 클래스에 오신 것을 환영합니다.'; break
+
+                    // default : content1.innerHTML = 'wrong input';
+                }
+            }
+        </script>
+    </body>
+</html>

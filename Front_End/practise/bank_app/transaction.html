@@ -1,0 +1,58 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="transaction" style="text-align: center;">
+            <h1 style="margin-top: 20px;">Bank Summary</h1><br>
+            UserID: <input type="text" id="userID"><br><br><br>
+            Deposit Amount: <input type="text" id="deposit"> <button onclick="deposit()">Deposit</button> <br><br><br>
+            Withdraw Amount: <input type="text"  id="withdraw"> <button onclick="withdraw()">Withdraw</button> <br><br><br>
+            Transfer Amount: <input type="number"id="transfer"> <button onclick="transfer()">Transfer</button>
+
+            <h1 style="text-align: center;">Balance is:</h1>
+            <p id="balance" style="text-align: center;"></p>
+
+            <button onclick="submit()">Submit</button>
+            <a href="bank_registration.html"><button>LogOut</button>
+        </div>
+           <script>
+            function submit() {
+
+                function Transaction(username, depositAmt, withdrawAmt) {
+
+                    this.username= username;
+                    this.depositAmt= depositAmt;
+                    this.withdrawAmt = withdrawAmt;
+
+                    // if(depositAmt > withdrawAmt){
+                    //     alert("Fetching details")
+                    // }
+                    // else if(depositAmt == withdrawAmt){
+                    //     alert("Both amounts are same")
+                    // }
+                    // else{
+                    //     alert("not enough balance")
+                    // }
+                }
+                    var trans = new Transaction
+                    (    username = document.getElementById("username").value,
+                         depositAmt = document.getElementById("deposit").value,
+                         withdrawAmt = document.getElementById("withdraw").value)
+                    console.log(trans);  
+
+                    localStorage.setItem("trans",trans);
+
+                    var obj = JSON.stringify(trans);
+                    localStorage.setItem("obj", obj);
+                    console.log(localStorage.getItem("obj"));
+                    
+                    let Balance = document.getElementById("balance");
+                    let result = parseInt( depositAmt - withdrawAmt );
+                    console.log(result);
+                    Balance.innerHTML = result;
+            }
+                
+        </script>
+    </body>
+</html>

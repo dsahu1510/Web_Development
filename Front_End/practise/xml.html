@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+         <script>
+          
+          
+             var httpRequest  =  new XMLHttpRequest();
+
+             httpRequest.open("get", "https://fakestoreapi.com/products");
+
+             httpRequest.send();
+
+             httpRequest.onreadystatechange = function(){
+                 console.log("state changed", httpRequest.readyState);
+                 console.log("status", httpRequest.status);
+                     if(httpRequest.readyState == 4 && httpRequest.status == 200){
+                          console.log(httpRequest.responseText);
+                     }
+             }
+
+             //console.log("I am line 25")
+            
+            
+          </script>
+
+     </body>
+</html>

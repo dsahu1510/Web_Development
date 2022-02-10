@@ -1,0 +1,57 @@
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="registration_page" >
+            <h1 style="text-align: center; margin: 20px;">Register Yourself To bank</h1>
+            <center>
+                Enter FirstName : <input type="text" id="firstname" required><br><br><br>
+                Enter LastName: <input type="text" id="lastname"><br><br><br>
+                Enter email: <input type="email" id = "email" required><br><br><br>
+                Enter Mobile No: <input type="text" id="mobile" maxlength="10" required><br><br><br>
+                <button id="button" onclick="register()">Register</button>
+                <a href="bank_login.html"><button>Login</button></a>
+
+                <p id="para"></p>
+            </center>
+        </div>
+
+        <script>
+
+            var arr = []
+            function register(){
+                             
+                FirstName = document.getElementById("firstname").value;
+                LastName = document.getElementById("lastname").value;
+                email = document.getElementById("email").value;
+                Mobile = document.getElementById("mobile").value;
+
+                let user1 =new Array();
+                user1 = JSON.parse(localStorage.getItem('user1'))?JSON.parse(localStorage.getItem('user1')):[]
+                console.log(user1)
+                
+                if(user1.some((v) =>{return v.email == email}))
+                {
+                    alert("email id exist")
+                }
+                else
+                {
+                    user1.push({
+                        "firstname":FirstName,
+                        "lastname":LastName,
+                        "email": email,
+                        "mobile": Mobile,
+                    })
+                }
+                localStorage.setItem("user1",JSON.stringify(user1));
+                
+                    
+            }
+            
+                   
+        </script>
+
+     </body> 
+</html>  

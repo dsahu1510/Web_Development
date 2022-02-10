@@ -1,0 +1,109 @@
+<!-- while statement -->
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <ul id="user">
+            <li>
+
+            </li>
+
+        </ul>
+        <script>
+            var users = [{
+    name: "Sai", 
+    address: "Madhapur", 
+    mobileNumber: "9010101010"
+},
+{
+    name: "Rajesh", 
+    address: "Manikonda", 
+    mobileNumber: "9877876568"
+},
+{
+    name: "Devyani", 
+    address: "Hyderabad", 
+    mobileNumber: "0401221232"
+},
+{
+    name: "Jaishri", 
+    address: "US", 
+    mobileNumber: "+9697R467811"
+}];
+
+var index=0;
+var userlist="";
+    while(index < users.length){
+
+        var people = users[index];
+
+        var details= "<li>" + people.name + " <br> " + people.mobileNumber + " <br>  " + people.address  + "</li>" + "<br>" 
+        // console.log(details);
+        userlist= details + userlist
+        index++;
+    }
+    console.log(userlist)
+    document.getElementById("user").innerHTML = userlist;
+
+
+        </script>
+    </body>
+</html>
+<!-- var users = [{
+    name: "Sai", 
+    address: "Madhapur", 
+    mobileNumber: "9010101010"
+},
+{
+    name: "Rajesh", 
+    address: "Manikonda", 
+    mobileNumber: "9877876568"
+},
+{
+    name: "Devyani", 
+    address: "Hyderabad", 
+    mobileNumber: "0401221232"
+},
+{
+    name: "Jaishri", 
+    address: "US", 
+    mobileNumber: "+9697R467811"
+}];
+
+console.log(users)
+
+i=0;
+
+while(i < users.length){
+    console.log(users[i])
+    i++;
+}
+
+
+
+
+
+
+var index = 0;
+var usersList="";
+   while(index){
+           var user = users[index];
+            var userDetails = "<li>"+ user.name + "  <br>   "+ user.address + "  <br>   "+ user.mobileNumber + "</li>" + "<br>";
+             usersList = usersList + userDetails;
+            index++;
+
+   }
+   console.log(usersList);
+
+   document.getElementById("users").innerHTML = usersList;
+            
+          </script>
+
+     </body>
+</html>
+
+
+class_code_sai_sir -->

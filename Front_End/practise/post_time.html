@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <input type="datetime-local" placeholder="enter date" id="startDate"> <br><br> 
+        <!-- <input type="date" placeholder="enter date" id="endDate"> <br><br> -->
+        <div style="width: 150px; height: 50px; float: left;">click here to calculate Time</div>
+        <button type="button" onclick="calculateTime()" style="margin-left: 20px; float: left;">Calculate</button>
+
+        <script>
+        
+        function calculateTime(){
+
+            var input = new Date (document.getElementById("startDate").value);
+            console.log(input);
+
+            var date = new Date();
+            console.log( date.getMonth()+1 + "/" + date.getDate() + "/" + date.getFullYear() + "/" + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
+
+            var diff = new Date(date.getTime() - input.getTime());
+            //console.log(diff)
+            
+            //console.log()
+
+            // var result = typeof(NaN);
+            // console.log(result);
+        }
+            
+        </script>
+    </body>
+</html>
+
+

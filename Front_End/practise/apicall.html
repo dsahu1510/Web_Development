@@ -1,0 +1,50 @@
+
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+
+        <input type="text" placeholder="username" id="usernames" onkeyup="display()">
+         
+         <script>
+            var httpRequest  =  new XMLHttpRequest();
+            httpRequest.open("get", "https://jsonplaceholder.typicode.com/users");
+            httpRequest.send();
+            httpRequest.onreadystatechange = function(){
+                 console.log("state changed", httpRequest.readyState);
+                 console.log("status", httpRequest.status);
+                     if(httpRequest.readyState == 4 && httpRequest.status == 200){
+                          var arr = JSON.parse(httpRequest.responseText);
+                          execute(arr);
+                     }
+            }
+            let result_arr = []
+            function execute (arr){
+                let new_arr = arr;
+                var names = document.getElementById("usernames").innerHTML;
+                for (var i=0; i<new_arr.length; i++){
+                    var new_obj = new_arr[i];
+                    result_arr.push(new_obj.username);
+                    console.log(result_arr);
+                }
+                if(){
+                    console.log("usernames alrdy taken");
+                }
+                else{
+                    console.log("username available")
+                }
+
+            }
+            function display(){
+                var names = document.getElementById("usernames").innerHTML;
+                var results = names.includes('Bret');
+                //console.log(results)
+            }
+            execute()
+        </script>
+
+     </body>
+</html>

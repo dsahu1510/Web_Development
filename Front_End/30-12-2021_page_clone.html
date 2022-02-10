@@ -1,0 +1,180 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: whitesmoke
+        }
+
+        #topnav {
+            margin: 0px;
+            padding: 0px;
+            height: 15%;
+            border: 2px;
+            background-color: white;
+            padding-top: 8px;
+            /* position: fixed; */
+        }
+
+        li {
+            display: block;
+            float: left;
+        }
+
+        img {
+            display: inline;
+            margin: 0px;
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        #navbar {
+            width: 100%;
+            height: 8%;
+            background-color: white;
+
+        }
+
+        #content {
+            height: 30%;
+            /* width: 100%; */
+            background-color: white;
+            margin: 20px 40px;
+
+        }
+
+        #main {
+            height: 40%;
+            /* width: 100%; */
+            background-color: white;
+            margin: 20px 40px;
+        }
+        #table2{
+            height: 40%;
+            /* width: 100%; */
+            background-color: white;
+            margin: 20px 40px;
+        }
+        footer{
+            width: 100%;
+            height: 5%;
+            background-color: cadetblue;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="topnav">
+        <ul>
+            <li><img src="./images/logo.png" alt="logo"></li>
+            <li> kaveri online services </li> <br>
+            <li> Department of stamps and Registration, Govrnment of Karnataka </li>
+            <li style="float: right; margin-right: 20px; ">
+                Hello, User
+            </li>
+            <li style="float: right; margin-right: 20px; ">
+                <button>
+                    <a href="#">LogOut</a>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div id="navbar">
+        <ul>
+            <li style="margin-right: 150px; padding-top: 10px;"><a style="text-decoration: none; color: black;"
+                    href="#">Home</a></li>
+            <li style="margin-right: 150px; padding-top: 10px;"><a style="text-decoration: none; color: black;"
+                    href="#">Resources</a></li>
+            <li style="margin-right: 150px; padding-top: 10px;"><a style="text-decoration: none; color: black;"
+                    href="#">About Department</a></li>
+            <li style="margin-right: 150px; padding-top: 10px;"><a style="text-decoration: none; color: black;"
+                    href="#">External Links</a></li>
+            <li style="margin-right: 150px; padding-top: 10px;"><a style="text-decoration: none; color: black;"
+                    href="#">Right to Information</a></li>
+            <li style="margin-left: 50px; padding-top: 10px;"><a style="text-decoration: none; color: black;"
+                    href="#">Help</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <a style="margin-left: 30px; text-decoration: none; color: black;" href="#">Back</a><br><br><br>
+        <!-- <img style="padding: 8px;" src="./images/icons8-lock-male-user-100.png" alt=""> -->
+        <a href="#"><img style="padding-left: 20px;" src="./images/icons8-add-male-user-100.png" alt=""></a>
+        <a style="text-decoration: none; color: black; font-size: 25px;" href="#"> <strong>Next we need to find the
+                value of your property</strong> </a>
+    </div>
+
+    <div id="main">
+        <p style="margin-left: 30px; padding-top: 20px;">Property 1 of 3</p>
+        <table style="width: 100%;">
+            <thead style="padding: 20px;">
+                <th> DISTRICT : BENGALURU ( RURAL ) </th>
+                <th> TALUKA: DEVANAHALLI </th>
+                <th> HOBLI/TOWN: VIJYAPURA </th>
+                <th> INDEX II: VILLAGE KOMMASANDRA </th>
+            </thead>
+
+            <tbody>
+                <tr style="text-align: center;">
+                    <td style="padding: 40px;"> property usage </td> 
+                    <td>property type</td>
+                    <td>total area</td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td style="padding: 25px; margin-left: 20px;">NON-AGRICULTURAL</td>
+                    <td> 
+                    <select>
+                        <option value=""disabled selected>value</option>
+                        <option>vacant site</option>
+                        <option>building</option>
+                        <option>flat/ building</option>
+                    </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="table2">
+        <p style="margin-left: 20px; padding-top: 20px; padding-bottom: 20px; font-size: 20px;" ><strong>Building Rate Details</strong></p>
+        <table border="2px"width=100%>
+            <thead style="background-color: cornflowerblue;">
+                <th>S.No.</th>
+                <th>Property Type</th>
+                <th>Rate</th>
+                <th>Select</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01</td>
+                    <td>Residential</td>
+                    <td>4,00,000.00</td>
+                    <td> <input type="radio" id="residential" name="Property Type" value="Residential"> </td>
+                </tr>
+                <tr>
+                    <td>02</td>
+                    <td>Commercial</td>
+                    <td>5,00,000.00</td>
+                    <td><input type="radio" id="commercial" name="Property type" value="commercial"></td>
+                </tr>
+                <tr>
+                    <td>03</td>
+                    <td>Industial</td>
+                    <td>6,00,000.00</td>
+                    <td><input type="radio" id="Industial" name="Property type" value="Industial"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <a style="margin:20px ; padding-top: 20px;" href="#">Accesibility statement | </a> &nbsp;&nbsp;&nbsp;
+        <a style="margin: 20px; padding-top: 20px;" href="#">Terms and conditions | </a> &nbsp;&nbsp;&nbsp;
+        <a style="margin: 20px; padding-top: 20px;" href="#">Website Policies | </a> &nbsp;&nbsp;&nbsp;
+        <a style="margin: 20px; padding-top: 20px;" href="#">Help | </a> &nbsp;&nbsp;&nbsp;
+        <a style="margin: 20px; padding-top: 20px;" href="#">Contact Us </a>
+    </footer>
+
+</body>
+
+</html>

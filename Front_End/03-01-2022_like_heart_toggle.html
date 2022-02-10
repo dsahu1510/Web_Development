@@ -1,0 +1,63 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #box {
+            border: 2px solid black;
+            height: 10%;
+            width: 50%;
+            text-align: center;
+            font-size: 40px;
+            margin-left: 25%;
+        }
+
+        #box1 {
+            border: 2px solid black;
+            height: 30%;
+            width: 30%;
+        }
+
+        #box2 {
+            border: 2px solid black;
+            height: 30%;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        Intro To JavaScript
+    </div> <br><br><br><br>
+    <div id="box1">
+        <p style="text-align: center; font-size: 30px;">
+            Like Button on Facebook <br><br>
+            <i onclick="like()" class="fa fa-thumbs-up" style="font-size:48px;color:grey"><span id="blue"></span></i>
+        </p>
+    </div> <br><br><br><br>
+    <div id="box2">
+        <p style="text-align: center; font-size: 30px;">
+            Like Button on Instagram <br><br>
+            <i onclick="heart()" class="fa fa-heart" style="font: size 40px;"><span id="red"></span></i>
+        </p>
+    </div>
+    <script>
+
+        var color1 = document.getElementsByClassName('fa fa-thumbs-up')[0];
+        var color2 = document.getElementsByClassName('fa fa-heart')[0];
+
+        function like() {
+            color1.style.color = color1.style.color === 'blue' ? 'grey' : 'blue';
+        }
+
+        function heart() {
+            color2.style.color = color2.style.color === 'red' ? 'black' : 'red';
+        }
+
+        
+    </script>
+</body>
+
+</html>
