@@ -13,3 +13,6 @@ constructor class
 setters and getters
 modules
 render in react
+
+	8feb
+fetch nd promises

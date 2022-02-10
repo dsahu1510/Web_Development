@@ -1,0 +1,14 @@
+<script>
+
+    fetch('https://jsonplaceholder.typicode.com/users').then(
+        Response => Response.json(),
+        // Response => {
+        //     console.log(Response);
+        //     Response.json();
+        // },
+        error => console.log(error),
+
+    ).then(
+        data => console.log(data)
+    )
+</script>
