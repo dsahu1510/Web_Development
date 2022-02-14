@@ -1,0 +1,136 @@
+Arrow Functions:
+
+Arrow functions are the syntactical sugar which performs the 
+same operation as general functions.
+
+syntax:
+
+ () => { // code}
+
+ function square(num){
+    return num* num;
+}
+
+console.log(square(10));
+
+var sqr = num => num * num;
+console.log(sqr(2));
+
+function login(username, password){
+    return username == "abc" && password == "abc";
+}
+
+var log = (u,p) => u == "abc" && p == "abc";
+
+
+
+PS: Create a login page, take u, p  from user and authenticate 
+the credentails using arrow function.
+<html>
+    <body>
+        <label for="">username</label>
+        <input type="text" id="name">
+        <label for="">password</label>
+        <input type="text" id="pass">
+        <button onclick='login()'>Submit</button>
+
+    
+    </body>
+    <script type="text/javascript">
+
+        var login=(u,p)=>{
+            var username=document.getElementById("name").value;
+            var password=document.getElementById("pass").value;
+
+            if(username=="sonia" && password=="sonia")
+            {
+                console.log("login successfull");
+            }
+            else
+            {
+                console.log("login not successfull");
+            }
+
+        }
+
+        //login("sonia","sonia");
+
+    </script>
+</html>
+
+Default Parameter Values:
+
+function f1(a=10,b=20){
+   console.log(a); // 10
+   console.log(b); // 20
+}
+f1();
+
+/*
+
+ function f1(){
+     var a,b; // u, u
+     console.log(a);
+     console.log(b);
+ }
+
+ f1();
+
+
+*/
+
+DPV are applicable in arrow functions.
+
+
+function f1(a=10,b=20){
+   console.log(a); // 10
+   console.log(b); // 20
+}
+f1(undefined,90);
+
+* Rest Parameters:
+
+function f1(a,b,...restParams){
+   console.log(a); 
+   console.log(b); 
+    console.log(restParams);
+    restParams.push(100);
+    console.log(restParams);
+}
+f1(10,20,40,50);
+
+var f1= (a=100, b=20,...x) => console.log(a,b,x);
+
+f1(0,1,8,4,5,4,5);
+
+var f1= (a=100, b=20,...x) => console.log(a,b,x);
+
+f1(undefined,undefined,8,4,5,4,5);
+
+spread operator:
+
+
+function f1(a,b,c,...restParam){
+    console.log(a,b,c);
+    console.log(restParam);
+}
+var arr=[100,200,300,400,500];
+
+//f1(arr[0],arr[1],arr[2]);
+
+f1(...arr);
+
+//f1(100,200,300,400,500);
+
+
+String Interpolation:
+
+PS:
+         Hello
+
+                   How 
+
+                             are 
+
+            You
+

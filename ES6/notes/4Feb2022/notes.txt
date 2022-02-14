@@ -1,0 +1,149 @@
+1. String Interpolation:
+
+
+var str = ` Hello
+
+                         How 
+
+          are 
+
+                    You
+
+`;
+
+console.log(str);
+
+
+2. Custom Interpolation:
+
+var line1 = "Hello! how are you?";
+var line2= "Hey";
+var str = `                         ${line1}
+
+                         How 
+
+          ${line2} 
+
+                    You
+
+`;
+
+console.log(str);
+
+PS:
+
+ var employees = [
+     {
+         name: "Kiran",
+         reporting_manager: "Rajesh",
+         "currentCTC" :"10LPA",
+         "revisedCTC":"16LPA,
+         role: "Senior Full StacK Developer"
+     },
+     {
+         name: "Rajesh",
+         reporting_manager: "Ravi",
+         "currentCTC" :"18LPA",
+         "revisedCTC":"26LPA,
+         role: "Architect"
+     },
+     {
+         name: "Anil",
+         reporting_manager: "Vikram",
+         "currentCTC" :"3LPA",
+         "revisedCTC":"6LPA,
+         role: "Junior Full StacK Developer"
+     }
+ ]
+
+ O/P:  3 Emails specific content with dynamic values.
+
+
+Classes:
+
+A class is a wireframe or a blue print or a template of a realtime 
+object.
+
+
+syntax:
+ 
+  class classname{
+
+       // variables 
+
+       // methods
+
+  }
+
+PS: Create / Store a list of employees into an array.
+
+
+class Employee{
+       ename;
+       eaddress;
+       edesg;
+       project;
+       login(){
+           console.log("employee logged in");
+       }
+       logout(){
+           console.log("employee logged out");
+       }
+}
+
+var emps= [];
+
+var emp1 = new Employee();
+emp1.ename="Emp1";
+emp1.edesg="Emp1 desg";
+emp1.project="Emp1 project";
+emp1.eaddress="Emp1 address";
+console.log(emp1);
+emp1.login();
+
+var emp2 = new Employee();
+emp2.ename="Emp2";
+emp2.edesg="Emp2 desg";
+emp2.project="Emp2 project";
+emp2.eaddress="Emp2 address";
+console.log(emp2);
+
+emp.push(emp1,emp2);
+
+
+PS: Create a class called product and create 3 products from it.
+
+
+Constructor:
+
+A Constructor is used to construct an object.
+
+
+
+class Employee{
+       ename;
+       eaddress;
+       edesg;
+       project;
+       constructor(ename, eaddress,edesg,project){
+              this.ename = ename;
+              this.eaddress = eaddress;
+              this.edesg =edesg;
+              this.project = project;
+       }
+       login(){
+           console.log("employee logged in");
+       }
+       logout(){
+           console.log("employee logged out");
+       }
+}
+var emp = new Employee("ravi","hyd","dev","crm");
+console.log(emp);
+
+
+
+
+
+
+
