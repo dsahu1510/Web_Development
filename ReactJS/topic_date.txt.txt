@@ -1,10 +1,8 @@
 9Feb
-
 intro to reactjs
 virtual DOM
 
 10feb
-
 create react app
 class components
 function components
@@ -13,7 +11,6 @@ function components
 state
 
 14Feb
-
 lifecycle
 single page application
 react router dom
@@ -21,6 +18,17 @@ navlink
 hashrouter
 
 15Feb
-
 event handling
 forms
+
+16feb
+lists and keys
+inheritance vs composition
+API for YouTube
+
+17feb
+youtube clone part1
+
+21feb
+youtube single page app
+search bar updated

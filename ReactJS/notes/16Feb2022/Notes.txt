@@ -1,0 +1,63 @@
+Composition vs Inheritance:
+
+Inheritance:
+
+Inheritance maintains / uses is-a relationship 
+
+
+class Engine{
+    engineNumber;
+}
+
+class OdoMeter{
+
+}
+
+class Bike extends Engine{
+
+}
+
+Bike is-a Engine 
+
+
+Composition:
+
+Composition maintains / uses has - a relationship
+
+
+class Engine{
+    engineNumber;
+}
+
+class OdoMeter{
+
+}
+
+class Bike {
+
+    engineNumber:Engine;
+    odoMeter:OdoMeter
+
+}
+
+Bike has -a engine 
+
+
+class Login{
+
+}
+
+class Register{
+
+}
+
+class Admin{
+     <Login></Login>
+     <Register></Register>
+}
+
+class User{
+ <Login></Login>
+  <Register></Register>   
+}
+
