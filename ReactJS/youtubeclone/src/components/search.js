@@ -3,46 +3,35 @@ import React from 'react';
 class SearchBar extends React.Component{
 
     
-    // constructor(){
-    //     super();
-    //     this.state = {
+    constructor(){
+        super();
+        this.state = {
 
-    //         term:""
-    //     }
-    // }
-
-    termUpdate = (event)=> {
-        console.log("getting an update");
-        var value = event.target.value;
-        var name = event.target.name;
-        this.setState({[name]: value});
+            term:""
+        }
     }
 
     formSubmit = (event) => {
-        console.log("form updated");
         event.preventDefault();
-        //console.log(this.state);
+        console.log(this.state);
+        this.props.onVideoSearch(this.state.term);
     }
-    btnClick = (event) => {
-        console.log("btn clicked");
-        console.log(this.state)
-    }
+    
     render(){
         return(
             <div>
-                
                     <h1>SearchBar</h1>
                     <form onSubmit={this.formSubmit}>
                         
-                        <input type = 'text' name='term' onChange={this.termUpdate} placeholder ='Search Here'></input>
+                        <input type = 'text' name='term' placeholder ='Search Here' onChange= {(event) => {this.setState({term:event.target.value})}}
+                        ></input>
 
                         <button onClick={this.btnClick}>Click Me!!</button>
 
                     </form>
 
-                
-            </div>
-        )
+                </div>
+            )
     }
 }
 export default SearchBar;

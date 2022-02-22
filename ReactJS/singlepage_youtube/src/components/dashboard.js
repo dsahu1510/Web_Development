@@ -1,20 +1,19 @@
 import React from 'react';
 import Search from 'youtube-api-search';
-import VideoList from './components/Videolist';
-import VideoPlayer from './components/Videoplayer';
-import SearchBar from './components/search';
-import './App.css';
+import VideoList from './Videolist';
+import VideoPlayer from './Videoplayer';
+import SearchBar from './search';
 
 const api_key = "AIzaSyCz0sQtkH2W9xv20GXRbqh3d9_fZqTYPOs"
 
-class App extends React.Component{
+class Dashboard extends React.Component{
 
   constructor(){
     super();
     this.state = {
       videos: [],
       firstVideo: null,
-      term : ""
+      
     }
   }
   componentDidMount(){
@@ -22,23 +21,26 @@ class App extends React.Component{
   }
   
   videoSearch = (term) =>{
-  Search({key:api_key},(videoU =>{
+  Search({key:api_key,term:term},(videoU)=>{
     console.log(videoU);
-    this.setState({videos:videoU,firstVideo:videoU[0],term:term});
-  }))
+    this.setState({videos:videoU,firstVideo:videoU[0]});
+  })
   }
   render(){
+    if(!localStorage.getItem('isUserLoggedIn')){
+      this.props.history.push('/login');
+    }
     return(
       <div>
 
         {/* <SearchBar OnVideoSearch = {(term) => {this.videoSearch(term)}}></SearchBar> */}
-        <SearchBar OnVideoSearch = {this.videoSearch}></SearchBar>
+        <SearchBar OnVideoSearch = {this.videoSearch}></SearchBar> 
         {/* <h1>{this.state.videos.length}</h1> */}
-        <VideoPlayer videoF = {this.state.firstVideo}></VideoPlayer>
+         <VideoPlayer videoF = {this.state.firstVideo}></VideoPlayer>
         <VideoList videoSelection = {videoF => {this.setState({firstVideo:videoF})}} videos = {this.state.videos}></VideoList>
         
       </div>
     )
   }
 }
-export default App;
+export default Dashboard;
