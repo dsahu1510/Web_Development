@@ -8,7 +8,7 @@ class Cars extends React.Component{
         return(
             <MyContext.Consumer>
             {
-                context => (
+                context =()=> (
                 <React.Fragment>
                     
                     {Object.keys(context.cars).map(carID => (
