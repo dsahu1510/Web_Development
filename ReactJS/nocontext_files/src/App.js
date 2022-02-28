@@ -14,18 +14,18 @@ class App extends React.Component{
     }
   }
   PriceInc = (selectedCar) =>{
-    var cars = Object.assign({}, this.state.cars);
-    cars[selectedCar].price = cars[selectedCar].price + 1;
+    var car = Object.assign({}, this.state.cars);
+    car[selectedCar].price = car[selectedCar].price + 1;
     this.setState({
-      cars
+      car
     });
   }
 
   PriceDec = (selectedCar) =>{
-    var cars = Object.assign({}, this.state.cars);
-    cars[selectedCar].price = cars[selectedCar].price - 1;
+    var car = Object.assign({}, this.state.cars);
+    car[selectedCar].price = car[selectedCar].price - 1;
     this.setState({
-      cars
+      car
     });
   }
  
@@ -33,7 +33,7 @@ class App extends React.Component{
     return(
       <div className='App'>
       <ProductList>
-        cars = {this.state.cars}
+        car = {this.state.cars}
         PriceInc = {this.PriceInc}
         PriceDec = {this.PriceDec}
       </ProductList>

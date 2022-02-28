@@ -9,7 +9,7 @@ class ProductList extends React.Component{
         return(
             <div className='Plist component'>
                 <Cars>
-                    cars = {this.props.cars}
+                    car = {this.props.cars}
                     PriceInc = {this.props.PriceInc}
                     PriceDec = {this.props.PriceDec}
                 </Cars>

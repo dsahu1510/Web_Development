@@ -34,10 +34,12 @@ class MyProvider extends React.Component{
                         });
                     }
                 }}
-               ></MyContext.Provider>
-               {this.props.children}
+               >
+                   {this.props.children}
+               </MyContext.Provider>
+               
             </div>
-        )
+        );
     }
 }
 export default MyProvider;

@@ -1,16 +1,11 @@
 import React from 'react';
 
-class BaseClass extends React.Component{
-
-    render(){
-        return(
-            <div>
-                <p>{this.props.name}</p>
-                <p>{this.props.price}</p>
-                <button onClick={this.props.PriceInc}></button>
-                <button onClick={this.props.PriceDec}></button>
-            </div>
-        )
-    }
-}
+const BaseClass = props => (
+    <React.Fragment>
+        <p>Name: {props.name}</p>
+        <p>Price: {props.price}</p>
+        <button onClick={props.PriceInc} >PriceInc</button>
+        <button onClick={props.PriceDec}>PriceDec</button>
+    </React.Fragment>
+);
 export default BaseClass;
