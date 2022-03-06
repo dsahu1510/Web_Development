@@ -3,9 +3,10 @@ import Search from 'youtube-api-search';
 import VideoList from './components/Videolist';
 import VideoPlayer from './components/Videoplayer';
 import SearchBar from './components/search';
-import './App.css';
+
 
 const api_key = "AIzaSyCz0sQtkH2W9xv20GXRbqh3d9_fZqTYPOs"
+
 
 class App extends React.Component{
 
@@ -14,7 +15,7 @@ class App extends React.Component{
     this.state = {
       videos: [],
       firstVideo: null,
-      term : ""
+      term : "",
     }
   }
   componentDidMount(){
@@ -27,6 +28,7 @@ class App extends React.Component{
     this.setState({videos:videoU,firstVideo:videoU[0],term:term});
   }))
   }
+  
   render(){
     return(
       <div>
