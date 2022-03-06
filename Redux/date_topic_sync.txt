@@ -1,4 +1,14 @@
+api.openweathermap.org/data/2.5/weather?q={delhi}&appid={5914a0d8e747a2fa170005ba8eb04136}
+
+
+
 26feb
 intro to redux
 
 28feb
+complete workflow redux
+
+1Mar
+redux part 2
+
+3Mar

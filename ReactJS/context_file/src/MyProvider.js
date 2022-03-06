@@ -8,7 +8,7 @@ class MyProvider extends React.Component{
         this.state = {
             cars: {
                 carNo101: {name: 'BMW', price: 200},
-                carNo102: {name: 'honda', price: 105},
+                carNo102: {name: 'Honda', price: 105},
                 carNo103: {name: 'Kia', price: 107}
             }
         }
