@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from 'youtube-api-search';
-import VideoList from './videolist';
-import VideoPlayer from './videoplayer';
+import VideoList from './Videolist';
+import VideoPlayer from './Videoplayer';
 import SearchBar from './search';
 
 const api_key = "AIzaSyCz0sQtkH2W9xv20GXRbqh3d9_fZqTYPOs"

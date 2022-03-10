@@ -1,0 +1,17 @@
+h2{
+    text-align: center;
+
+}
+.primary{
+    text-align: center;
+    flex: content;
+    margin-bottom: 10px;
+}
+
+.secondary{
+    text-align: center;
+    flex: content;
+}
+#your result{
+    text-align: center;
+}
