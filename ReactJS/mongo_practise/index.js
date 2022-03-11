@@ -12,4 +12,4 @@ var Schema=mongoose.Schema;
       }
  });
 
- module.exports=mongoose.model('employee',UsersSchema);
+ module.exports=mongoose.model('users',UsersSchema);
