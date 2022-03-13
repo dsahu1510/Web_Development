@@ -3,15 +3,13 @@ import React from "react";
 
 class User extends React.Component{
 
-    componentDidMount(){
+        componentDidMount(){
         console.log("did mount called");
-        axios.get("http://localhost:8785/users").then  (
-            Response =>{
-                //console.log(Response.data[0].address);
-                console.log(Response.data);
+        axios.get("http://localhost:8785/users")
+        .then (Response =>
+            {console.log(Response.data);
             },
-            error =>{
-                console.error(error);
+            error =>{console.error(error);
             }
             
         )
@@ -19,7 +17,10 @@ class User extends React.Component{
     render(){
 
         return(
-            <div>in user component</div>
+
+            
+            <div>Table in process
+            </div>
         )
 
     }   
