@@ -1,0 +1,27 @@
+<!-- PS: Create an array of users and store them in Local Storage and retreive them from LC and display in console. -->
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        var users = [{
+            username: 'user1'
+        },
+        {
+            username: 'user2'
+        },
+        {
+            username:'user3'
+        }];
+        localStorage.setItem('users',JSON.stringify(users)); //using json. stringyfy bcoz we can store the value in key pair format and that too is in form of string
+                                                            // so if we wnt to save the data in the form of an array we use this
+        
+        console.log(JSON.parse(localStorage.getItem('users')).length); //json.parse is used becoz when the object is kept in an array so it must count or consider the input to an array
+                                                                        //bt it takes it as a string so to make them count as an array object we use it.
+        
+        </script>
+        
+    </body>
+</html>

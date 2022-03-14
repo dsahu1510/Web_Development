@@ -1,0 +1,44 @@
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+           <form>
+              VM: <input type="text" id="vm"> <br><br>
+              RAM: <input type="text" id="ram"><br><br>
+              storage: <input type="text" id="storage"><br><br>
+              Service Provider: <input type="text" id="service"><br><br>
+              <button onclick="show()">Submit</button>
+           </form>
+
+            <h1 id="vm_m"></h1>
+            <h1 id="ram_m"></h1>
+            <h1 id="storage_m"></h1>
+            <h1 id="service_m"></h1>
+
+         <script>
+         
+                  localStorage.setItem('vm','Linux');
+                  localStorage.setItem('ram',"8gb");
+                  localStorage.setItem('storage', '128gb');
+                  localStorage.setItem('service','Azure');
+
+                 document.getElementById("vm").value=localStorage.getItem("vm");
+                 document.getElementById("ram").value=localStorage.getItem("ram");
+                 document.getElementById("storage").value=localStorage.getItem("storage");
+                 document.getElementById("service").value=localStorage.getItem("service");
+
+                        function show(){
+                            event.preventDefault();
+                            document.getElementById("vm_m").innerHTML= document.getElementById("vm").value;
+                  document.getElementById("ram_m").innerHTML= document.getElementById("ram").value;
+                  document.getElementById("storage_m").innerHTML= document.getElementById("storage").value;
+                  document.getElementById("service_m").innerHTML= document.getElementById("service").value;
+                        }
+         
+         </script>
+
+     </body>
+</html>

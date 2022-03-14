@@ -1,0 +1,48 @@
+<!--PS: Implement a simple auto loading form that contains data from local storage. -->
+
+<html>
+    <head>
+        <body>
+
+            <form>
+                Uid: <input type="text" id="id"><br><br><br>
+                Username: <input type="text" id="username"> <br><br><br>
+                User_address: <input type="text" id="address"> <br><br><br>
+                Designation: <input type="text" id="designation"> <br><br><br>
+                Joining: <input type="text" id="joining"> <br><br><br>
+                <button onclick="show()" id="input">submit</button>
+            </form>
+
+            <h3 id="id_v"></h3>
+            <h3 id="username_v"></h3>
+            <h3 id="address_v"></h3>
+            <h3 id="designation_v"></h3>
+            <h3 id="joining_v"></h3>
+
+            <script>
+                localStorage.setItem('id','101');
+                localStorage.setItem('username','harish');
+                localStorage.setItem('address','raipur');
+                localStorage.setItem('designation','engineer');
+                localStorage.setItem('joining','2018');
+
+                document.getElementById('id').value=localStorage.getItem('id');
+                document.getElementById('username').value=localStorage.getItem('username');
+                document.getElementById('address').value=localStorage.getItem('address');
+                document.getElementById('designation').value=localStorage.getItem('designation');
+                document.getElementById('joining').value=localStorage.getItem('joining');
+
+                
+                function show(){
+                    event.preventDefault();
+                    document.getElementById('id_v').innerHTML = document.getElementById('id').value;
+                    document.getElementById('username_v').innerHTML = document.getElementById('username').value;
+                    document.getElementById('address_v').innerHTML = document.getElementById('address').value;
+                    document.getElementById('designation_v').innerHTML = document.getElementById('designation').value;
+                    document.getElementById('joining_v').innerHTML = document.getElementById('joining').value;
+                }
+            </script>
+
+        </body>
+    </head>
+</html>

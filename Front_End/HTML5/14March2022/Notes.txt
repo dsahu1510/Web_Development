@@ -1,0 +1,146 @@
+Web Storage:
+
+The web Storage is of 2 types,
+
+1. local storage :  
+
+It is one of the dev tools available to store some data in key-value pair 
+format in the browser memory.
+
+The data stored in local storage is permanent, until we go and 
+delete it manually.
+
+window object provides localStorage.
+
+methods:
+
+ setItem: It is used to set an item(key-value pair) in local storage.
+
+    key and values will always be string.
+
+    localStorage.setItem(key,value)
+
+  getItem:
+
+     It is used to get the value of an item based on the key.
+
+       localStorage.getItem(key)
+
+       if the key is available,then it returns the value else it 
+       returns null.
+
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+         <script>
+         
+              // localStorage.setItem('username','sai123');
+
+             var username =  localStorage.getItem('username');
+             console.log('username', username);
+
+             var password = localStorage.getItem('password');
+             console.log("password", password);
+
+              localStorage.setItem('username','sai987');
+
+              localStorage.setItem('password', 123);
+              localStorage.setItem('uid',1234);
+
+              localStorage.removeItem('uid');
+              localStorage.clear();
+         
+         </script>
+
+     </body>
+</html>
+
+Problem Statement:
+
+Implement a simple auto loading form that contains data from 
+local storage.
+
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+           <form>
+              VM: <input type="text" id="vm"> <br><br>
+              RAM: <input type="text" id="ram"><br><br>
+              storage: <input type="text" id="storage"><br><br>
+              Service Provider: <input type="text" id="service"><br><br>
+              <button onclick="show()">Submit</button>
+           </form>
+
+            <h1 id="vm_m"></h1>
+            <h1 id="ram_m"></h1>
+            <h1 id="storage_m"></h1>
+            <h1 id="service_m"></h1>
+
+         <script>
+         
+                  localStorage.setItem('vm','Linux');
+                  localStorage.setItem('ram',"8gb");
+                  localStorage.setItem('storage', '128gb');
+                  localStorage.setItem('service','Azure');
+
+                 document.getElementById("vm").value=localStorage.getItem("vm");
+                 document.getElementById("ram").value=localStorage.getItem("ram");
+                 document.getElementById("storage").value=localStorage.getItem("storage");
+                 document.getElementById("service").value=localStorage.getItem("service");
+
+                        function show(){
+                            event.preventDefault();
+                            document.getElementById("vm_m").innerHTML= document.getElementById("vm").value;
+                  document.getElementById("ram_m").innerHTML= document.getElementById("ram").value;
+                  document.getElementById("storage_m").innerHTML= document.getElementById("storage").value;
+                  document.getElementById("service_m").innerHTML= document.getElementById("service").value;
+                        }
+         
+         </script>
+
+     </body>
+</html>
+
+PS: Create an array of users and store them in Local Storage and retreive them from LC and display in console.
+
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+         <script>
+         
+             var users=[{
+                 username: "user1"
+             },
+             {
+                 username: "user2"
+             },
+             {
+                 username: "user3"
+             }];
+              localStorage.setItem('users',JSON.stringify(users));
+
+              console.log(JSON.parse(localStorage.getItem('users')).length);
+         </script>
+
+     </body>
+</html>
+
+PS:  Create an empty array, store it in LC and update the array with 
+one object in the local storage.
+
+2. session storage:
+
+
+
