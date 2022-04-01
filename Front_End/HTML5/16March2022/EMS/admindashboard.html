@@ -1,0 +1,61 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1>Admin Login Page</h1>
+        <h1 id="welcome"></h1><br>  
+        <!-- <h2 id="uname">List</h2> -->      
+
+        <table border="1" id="table">
+                <tr>
+                    <th id="empid">EmpId</td>
+                    <th id="name">Name</td>
+                    <th id="project">Projects</td>
+                </tr>
+          
+            <tbody id="tbody">                
+            </tbody>
+        </table><br><br><br>
+        <form>
+            Name: <input id="username1"><br><br>
+            Project: <input id="project"><br><br>
+            <button onclick="updateData()">Update</button>
+        </form>
+    <script>
+        var username = sessionStorage.getItem('admin_name');
+        document.getElementById('welcome').innerHTML= "Welcome  " + username + '!!';
+    
+        var employee = JSON.parse(localStorage.getItem('employees'));
+        console.log(employee);
+        
+
+        buildTable(employee)
+        function buildTable(data){
+            var table = document.getElementById('tbody')
+
+            for (var i = 0; i < data.length; i++){
+                var row = `<tr>
+                                <td>${data[i].empId}</td>
+                                <td>${data[i].username}</td>
+                                <td>${data[i].project}</td>
+                                <td><button onClick='editData()'>edit</button></td>
+
+                            </tr>`
+                table.innerHTML +=row
+            }
+        }
+
+        
+        function editData(){
+            
+            
+        }
+        
+        
+            
+    </script>
+
+    </body>
+</html>

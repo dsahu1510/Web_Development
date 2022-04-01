@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <div id="container">
+            <p id="edit"><b> Click "Edit" button to edit content. </b></p>
+            <button type="submit" id="edit-button">Edit</button>
+            <button type="submit" id="end-editing">Done</button>
+        </div>
+        
+    </body>
+
+    <script>
+        var person =localStorage. setItem('person', 'ramesh');
+        const paragraph = document.getElementById("edit");
+        const edit_button = document.getElementById("edit-button");
+        const end_button = document.getElementById("end-editing");
+        edit_button.addEventListener("click", function() {
+        paragraph.contentEditable = true;
+        paragraph.style.backgroundColor = "#DDDBDB";  
+        localStorage.setItem('person',JSON.stringify(person));
+    } );
+        end_button.addEventListener("click", function() {
+        paragraph.contentEditable = false;
+        paragraph.style.backgroundColor = "#FFE44D";
+    } )
+    </script>
+</html>

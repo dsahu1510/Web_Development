@@ -1,0 +1,51 @@
+<html>
+    <head>
+
+    </head>
+     <body>
+
+         <a href="login.html">Login</a> &nbsp;&nbsp;&nbsp;
+         <a href="register.html">Register</a>&nbsp;&nbsp;&nbsp;
+         <a href="adminlogin.html">Admin</a>
+
+          <br><br>
+
+          <form>
+
+             Username: <input type="text" id="username"> <br><br>
+             Password: <input type="password" id="password"><br><br>
+            
+             <button onclick="login()">Login</button>
+          </form>
+
+           <script>
+
+
+            
+                   function login(){
+                       event.preventDefault();
+                    var username =  document.getElementById("username").value;
+                    var password =  document.getElementById("password").value;
+                      var employees = JSON.parse(localStorage.getItem('employees'));
+                        var isUserAvailable = false;
+                        var usernames= [];
+                        for(var i=0;i<employees.length;i++){
+                             var employee = employees[i];
+                              usernames.push(employee.username);
+                        }
+                        console.log('usernames',usernames);
+                        if(usernames.includes(username)){
+                               employees.forEach( (employee) => {
+                                       if(employee.username == username && employee.password == password){
+                                           sessionStorage.setItem('username',username);
+                                           window.location.href= "employeedashboard.html";
+                                       }
+                                       
+                               }) 
+                        }
+                   }
+                   
+           </script>
+
+     </body>
+</html>

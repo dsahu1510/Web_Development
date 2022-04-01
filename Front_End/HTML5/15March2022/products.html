@@ -1,0 +1,39 @@
+
+
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+         <form>
+             Pid: <input type="text" id="pid"><br><br><br>
+             Pname: <input type="text" id="pname"><br><br><br>
+              <button onclick="addProduct()">Add Product</button><br><br><br>
+         </form>
+
+         <script>
+               if(localStorage.getItem('products') == null){
+                localStorage.setItem('products',JSON.stringify([]));
+               }
+                  function addProduct(){
+                      event.preventDefault();
+                    var pid = document.getElementById("pid").value;
+              var pname = document.getElementById("pname").value;
+
+              var product= {
+                  pid:pid,
+                  pname:pname
+              }
+            var products= JSON.parse(localStorage.getItem("products"));
+            products.push(product);
+            localStorage.setItem('products',JSON.stringify(products));
+                  }
+
+             
+         
+         </script>
+
+     </body>
+</html>

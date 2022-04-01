@@ -1,0 +1,39 @@
+Create a register page with fields username, password, emailid, 
+store the username,password, mobile number in session storage and 
+navigate to userdasboard and display the username from session 
+storage.<br><br><br>
+
+
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+
+        username: <input type="text" id="username"><br><br><br>
+        password: <input type="text" id="password"><br><br><br>
+        email: <input type="email" id="email"><br><br><br>
+
+        <button onclick="register()">Submit</button><br><br><br>
+        <script>
+
+            
+            function register(){
+                event.preventDefault()
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                var email = document.getElementById('email').value;
+                sessionStorage.setItem('username',username);
+                sessionStorage.setItem('password',password);
+                sessionStorage.setItem('email', email);
+
+                window.location.href = 'user_dashboard.html';
+            
+            }
+            
+        </script>
+        
+    </body>
+</html>

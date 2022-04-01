@@ -1,0 +1,36 @@
+<html>
+    <head>
+
+    </head>
+     <body>
+
+            <button onclick="logout()">Logout</button>
+          <br><br>
+           <h1>Employee Dashboard</h1>
+
+            <h1 id="welcome"></h1>
+
+             <script>
+             
+              var username = sessionStorage.getItem('username');
+
+                 if(username == null){
+                     window.location.href="login.html";
+                 }
+                 else
+                 {
+                    document.getElementById('welcome').innerHTML= "Welcome  " + username;
+                 }
+               
+               
+
+               function logout(){
+                     sessionStorage.removeItem('username');
+                      window.location.href="login.html";
+
+                }
+             
+             </script>
+
+     </body>
+</html>

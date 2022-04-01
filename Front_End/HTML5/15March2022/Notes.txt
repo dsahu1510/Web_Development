@@ -1,0 +1,34 @@
+Session Storage:
+
+The Session Storage is similar to Local Storage but the difference is, 
+the session Storage data is temporary.
+
+sessionStorage object is used to store the session.
+
+Methods of Session Storage are similar to the methods of Local Storage.
+
+Problem Statement:
+
+
+Create a register page with fields username, password, emailid, 
+store the username,password, mobile number in session storage and 
+navigate to userdasboard and display the username from session 
+storage.
+
+
+Refer register.html and dashboard.html for answer.
+
+Problem Statement:
+
+ Create a simple form that has two fields, 
+
+   productId, product_name 
+
+   Whenever user enters the pid, pname store the details in local storage 
+   and display them on UI.
+
+   If we have more than one Pid, pname , we should display the list 
+   of the products in the form of a list.
+
+   
+

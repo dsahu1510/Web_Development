@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+    </head>
+     <body>
+
+         <a href="login.html">Login</a> &nbsp;&nbsp;&nbsp;
+         <a href="register.html">Register</a>&nbsp;&nbsp;&nbsp;
+         <a href="adminlogin.html">Admin</a>
+        
+          <br><br>
+
+          <form>
+
+             Username: <input type="text" id="username"> <br><br>
+             Password: <input type="password" id="password"><br><br>
+             Employee Id: <input type="text" id="employee_id"><br><br>
+             Project: <input type="text" id="project"><br><br>
+             <button onclick="register()">Register</button>
+          </form>
+
+           <script>
+
+                  
+                     if( localStorage.getItem('employees') == null){
+                         localStorage.setItem('employees',JSON.stringify([]));
+                     }
+
+                   function register(){
+                       event.preventDefault();
+                    var username =  document.getElementById("username").value;
+                    var password =   document.getElementById("password").value;
+                    var empId = document.getElementById("employee_id").value;
+                    var project = document.getElementById("project").value;
+
+                      var employee = {
+                           username :username,
+                           password: password,
+                           empId :empId,
+                           project:project
+                      }
+
+                       var employees = JSON.parse(localStorage.getItem('employees'));
+                       employees.push(employee);
+                       localStorage.setItem('employees',JSON.stringify(employees));
+                       sessionStorage.setItem('username',username);
+                       window.location.href = "employeedashboard.html";
+                   }
+                    
+           </script>
+
+     </body>
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+
+    </head>
+
+     <body>
+
+          <form>
+             Username:<input type="text" id="username">
+             Password: <input type="password" id="password">
+             email: <input type="text" id="email">
+             <button onclick="register()">Register</button>
+          </form>
+
+         <script>
+         
+                   function register(){
+                       event.preventDefault();
+                     var username =  document.getElementById("username").value;
+                     var password = document.getElementById("password").value;
+                     var email = document.getElementById("email").value;
+                      sessionStorage.setItem('username', username);
+                      sessionStorage.setItem('password', password);
+                      sessionStorage.setItem('email', email);
+                      window.location.href= "dashboard.html";
+                   }
+         
+         </script>
+
+     </body>
+</html>

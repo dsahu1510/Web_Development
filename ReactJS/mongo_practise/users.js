@@ -3,7 +3,7 @@ var app =express();
 var mongoose = require('mongoose');
 var index = require('./index');
 
-mongoose.connect("mongodb://localhost/L&T",(err) =>{
+mongoose.connect("mongodb://localhost/myntra",(err) =>{
     if(err){
         console.log("error",err);
     }
@@ -12,7 +12,7 @@ mongoose.connect("mongodb://localhost/L&T",(err) =>{
     }
 })
 
-app.get('/Employee', (req,res) => {
+app.get('/users', (req,res) => {
 index.find({},(err,docs) => {
     console.log(docs);
     res.send(docs);
@@ -20,7 +20,7 @@ index.find({},(err,docs) => {
 
 })
 
-app.listen(8000, () => {
+app.listen(8011, () => {
     console.log("server started!");
 })
 // npm i express mongoose

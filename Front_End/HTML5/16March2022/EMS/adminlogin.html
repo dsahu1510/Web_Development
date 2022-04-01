@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+
+        <form>
+            admin name: <input type = "text" id="admin_name">
+            admin password: <input type="text" id="admin_password">
+            <button onclick="userDetail()">Submit</button>
+            <h1 id="getDetail"></h1>
+        <script>
+
+            if( sessionStorage.getItem('admin') == null){
+                sessionStorage.setItem('admin',JSON.stringify([]));
+            }
+
+            function userDetail(){
+                 event.preventDefault();
+                var admin_name =  document.getElementById("admin_name").value;
+                var password =   document.getElementById("admin_password").value;
+
+                var adminlogin = {
+                    admin_name :admin_name,
+                    password: password,
+               }
+                var admin = JSON.parse(sessionStorage.getItem('admin'));
+                admin.push(adminlogin);
+                sessionStorage.setItem('admin',JSON.stringify(admin));
+                sessionStorage.setItem('admin_name',admin_name);
+                window.location.href = "admindashboard.html";
+            }
+        </script>
+
+        </form>
+    </body>
+</html>

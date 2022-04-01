@@ -1,0 +1,63 @@
+Create a simple form that has two fields, 
+
+   productId, product_name 
+
+Whenever user enters the pid, pname store the details in local storage 
+and display them on UI.
+
+If we have more than one Pid, pname , we should display the list 
+of the products in the form of a list.<br><br><br>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <form>
+
+            product id: <input type="text" id="pid"><br><br><br>
+            product name: <input type="text" id="pname"><br><br><br>
+            <button onclick="add()">Add Items</button><br><br><br>
+
+        </form>
+
+        <div>
+            <h3 id="list_items"></h3>
+        </div>
+
+        <script>
+
+            if(localStorage.getItem('products') == null){
+                localStorage.setItem('products', JSON.stringify([]));
+            }
+            function add(){
+                event.preventDefault();
+                var pid= document.getElementById('pid').value;
+                var pname = document.getElementById('pname').value;
+
+                var product={
+                    pid:pid,
+                    pname: pname
+                }
+
+                var products = JSON.parse(localStorage.getItem('products'));
+                products.push(product);
+                localStorage.setItem('products', JSON.stringify(products));
+
+                var text = '';
+                var product_details = document.getElementById('list_items');
+                for(var i = 0; i < localStorage.length; i++){
+                    var key = localStorage.key(i);
+                    var value = localStorage.getItem(key);
+
+                    text += localStorage.getItem(key);
+                    product_details.innerHTML=text;
+                }
+
+                
+            }
+        </script>
+
+    </body>
+</html>
